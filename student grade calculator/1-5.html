@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grade Calcy:Class 1-5</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <style>
+  
+*{
+  cursor: url('./highlight-purple-10/Normal Select.cur'), default;
+}
+
+body {
+  background:#edc2d8ff;
+  font-size: 12px;
+
+}
+
+body, button, input {
+  font-family: 'Righteous', cursive;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.background {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+}
+
+.screen {
+  position: relative;
+  background: #8abad3ff;
+  width: 700px;
+  border-radius: 15px;
+  right: 10px;
+}
+
+.screen:after {
+  
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.app-title {
+  display: flex;
+  /*flex-direction: column;*/
+  justify-content: center;
+  align-items: center;
+  color: #edc2d8ff;
+  font-size: 26px;
+  text-transform: uppercase;
+  border-left: 4px solid #fa8bc4;
+  padding: 10px;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #fcf6f5ff;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s;
+  cursor: url('./highlight-purple-10/Text Select.cur'), default;
+}
+
+.app-form-control::placeholder {
+  color: #fcf6f5ff;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #fcf6f5ff;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  color: #edc2d8ff;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.app-form-button:hover {
+  color: #fa8bc4;
+  cursor: url('./highlight-purple-10/Link Select.cur'), default;
+}
+
+.showdata{
+  text-align: center;
+  color: #fcf6f5ff;
+  font-size: 1.2rem;
+  padding-top: -10px;
+  padding-bottom: 10px;
+}
+
+
+.butter{
+  animation-name: rumble;
+  animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rumble{
+  0%{
+    opacity: 100%;
+  }
+
+  10%{
+    opacity: 10%;
+  }
+  20%{
+    opacity: 100%;
+  }
+
+  30%{
+    opacity: 0%;
+  }
+  40%{
+    opacity: 100%;
+  }
+
+ 50%{
+    opacity: 20%;
+  }
+  
+  60%{
+    opacity: 100%;
+  }
+
+  70%{
+    opacity: 50%;
+  }
+  80%{
+    opacity: 100%;
+  }
+
+  90%{
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+
+}
+
+  </style>
+</head>
+<body>
+
+
+
+
+
+
+<!-- Student Grade Calculator
+
+Each student has to enter respective subject marks.
+1. Find Total?
+2. Find Percentage?
+3. Find Grade?
+4. Check Pass or Fail.
+5. Combined all and show Output.
+
+DONATION FOR SUPPORT:    PhonePay = vinodbahadur@ybl      GooglePay: vbthapa55@oksbi
+ -->
+
+
+
+
+
+
+
+
+
+
+<div class="background">
+  <img src="./6o4.gif"  style="right: -140px;position: relative;" height="150px">
+  <img src="./0.gif"  class="butter" style="top: 450px;margin-left:0px;position: relative;right: 90px;" height="150px">
+</marquee>
+  <div class="container">
+    <div class="screen"><button style="margin-left: 10px;margin-top: 10px;cursor: url('./highlight-purple-10/Link Select.cur'), default;  " class="btn btn-outline-primary" onclick="window.location='./index.html'">HOME</button>
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <div class="animated infinite pulse">
+              Student <br> Grade <br> Calculator
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="screen-body-item">
+          <div class="app-form">
+            <div class="app-form-group">
+              <input type="text" maxlength='3' class="app-form-control" placeholder="ICT" id="ict">
+            </div>
+            <div class="app-form-group">
+              <input type="text" maxlength='3'  class="app-form-control" placeholder="SCIENCE" id="sci">
+            </div>
+            <div class="app-form-group">
+              <input type="text" maxlength='3'  class="app-form-control" placeholder="social studies" id="sst">
+            </div>
+            <div class="app-form-group">
+              <input  type="text" maxlength='3'   class="app-form-control"   placeholder="MATHS" id="maths">
+            </div>
+             <div class="app-form-group">
+              <input  type="text" maxlength='3'   class="app-form-control"   placeholder="islamiat" id="isl">
+            </div>
+            <div class="app-form-group">
+              <input  type="text" maxlength='3'   class="app-form-control"   placeholder="English" id="eng" >
+            </div>
+            <div class="app-form-group">
+              <input  type="text"   maxlength='3' class="app-form-control"   placeholder="Urdu" id="urdu" >
+            </div>
+            <div > 
+              <input type="button" name="" value="showPercentage" class="app-form-button" onclick="calcy()">
+            </div>            
+          </div>
+      </div>
+
+    </div>
+      <div class="app-form-group showdata">
+              <p id="showData" >  </p>
+     </div>
+  </div>
+</div>
+<img src="./6o4.gif" height="150px">
+
+<img src="./0.gif"   class="butter"  style="top: 450px;position: relative;left: -110px;" height="150px">
+</marquee>
+</div>
+<script>
+  
+const calcy = () =>{
+  let eng = document.getElementById('eng').value;
+  let maths = document.getElementById('maths').value;
+  let ict = document.getElementById('ict').value;
+  let urdu = document.getElementById('urdu').value;
+  let sst = document.getElementById('sst').value;
+  let sci = document.getElementById('sci').value;
+  let isl = document.getElementById('isl').value;
+
+  let grades = "";
+
+
+  let totalGrades = parseInt(urdu) + parseInt(maths) + parseInt(sci) + parseInt(sst) + parseInt(eng) + parseInt(ict) + parseInt(isl);
+
+  let perc = (totalGrades/800) * 100;
+
+  debugger;
+
+  if(perc <= 100  && perc >= 80){
+    grades = 'A+';
+  }else if(perc <= 79  && perc >= 70){
+     grades = 'A';
+  }else if(perc <= 69  && perc >= 60){
+     grades = 'B';
+  }else if(perc <= 59  && perc >= 50){
+     grades = 'C';
+  }else if(perc <= 49  && perc >= 40){
+     grades = 'D';
+  }else if(perc <= 39  && perc >= 33){
+     grades = 'B';
+  }else{
+     grades = 'F';
+  }
+
+
+  if(totalGrades <= 800){
+     
+     if(perc >= 32.5){
+ 
+       document.getElementById('showData').innerHTML = ` Out of 800 your total is  ${totalGrades} and percentage is ${perc}%. <br> Your grade is ${grades}. You are Pass. `
+     }
+     else{
+       document.getElementById('showData').innerHTML = ` Out of 800 your total is  ${totalGrades} and percentage is ${perc}%. <br> Your grade is ${grades}. You are Fail. `
+     }
+ }
+ else{
+   document.getElementById('showData').innerHTML = 'Marks Are Not Valid. Please Enter Valid Marks.All Marks Should Be Out Of Hundred. '
+ 
+ }
+}
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
